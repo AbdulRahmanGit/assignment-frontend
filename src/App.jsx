@@ -6,8 +6,8 @@ import Register from './components/Register';
 import UserDashboard from './components/UserDashboard';
 import AdminDashboard from './components/AdminDashboard';
 import ProtectedRoute from './components/ProtectedRoute';
-import { ThemeProvider } from "@/components/theme-provider"
-
+import { ThemeProvider } from "@/components/theme-provider";
+import { Analytics } from '@vercel/analytics/react';
 function App() {
   return (
     <ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
@@ -38,6 +38,7 @@ function App() {
           </div>
         </Router>
         <Toaster />
+        <Analytics/>
       </AuthProvider>
     </ThemeProvider>
   );
